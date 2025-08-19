@@ -5,8 +5,8 @@ from pathlib import Path
 
 # Config
 task = 3
-INPUT_FILE = f"input/input{task}.txt"
-OUTPUT_DIR = Path(f"output/output{task}/excel")
+INPUT_FILE = f"byusername/input/input{task}.txt"
+OUTPUT_DIR = Path(f"byusername/output/output{task}/excel")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 API_URL = "https://instagram-scraper-api2.p.rapidapi.com/v1/reels"

@@ -6,12 +6,12 @@
   <img src="https://img.shields.io/badge/Python-3.8+-blue.svg">
   <img src="https://img.shields.io/badge/License-MIT-green.svg">
   <img src="https://img.shields.io/badge/Output-Excel%20(.xlsx)-orange.svg">
-  <img src="https://img.shields.io/github/stars/yourusername/instagram-reels-scraper?style=social">
+  <img src="https://img.shields.io/github/stars/hasnizihar/instagram-reels-scraper?style=social">
 </p>
 
 A simple **Python script** to scrape **Instagram Reels metadata** (posted time, views, username, reel URL) for one or more accounts using the **RapidAPI Instagram Scraper API**.  
 
-The script reads usernames from a text file, fetches reels data, and saves the results to **Excel files**.
+The script reads usernames or hashtags from a text file, fetches reels data, and saves the results to **Excel files**.
 ## 🎯 Purpose
 <p align="justify">
 This project is designed to help developers, researchers, and social media analysts quickly fetch and organize <b>Instagram Reels metadata</b> (posted time, views, and URLs) into Excel files for easier analysis and reporting.  
@@ -29,20 +29,31 @@ It saves time, automates repetitive tasks, and provides structured data for insi
 ---
 ## 📂 Project Structure
 
-```
-.
-├── input/
-│   └── input1.txt         # Usernames should be in one line separated by spaces
-├── output/
-│   └── output1/
-│       └── excel/
-│           └── instagram\_reels\_<username>.xlsx
-├── scraper-V1.0.py             # main script
-├── scraper-V2.0.py             # main script - optimized version
-└── README.md               # documentation
 
 ```
 
+instagram-reels-scraper/
+├── byhashtag/
+│   ├── input/
+│   │   └── input1.txt
+│   └── output/
+│       └── output1/
+│           └── excel/
+│
+├── byusername/
+│   ├── input/
+│   │   └── input1.txt
+│   └── output/
+│       └── output1/
+│           └── excel/
+│
+├── LICENSE
+├── README.md
+├── scraper-V1.0.py
+├── scraper-V2.0.py
+└── scraper-V3.0.py
+
+```
 ---
 ## 🛠️ Requirements
 - Python **3.8+**
@@ -71,10 +82,12 @@ pip install requests pandas openpyxl
    cd instagram-reels-scraper
    ```
 
-2. Add Instagram usernames to an input file (e.g., `input/input1.txt`):
+2. Add Instagram usernames/hashtag to an input file (e.g., `input/input1.txt`):
 
    ```
-   username1 username2 username3
+   username1
+   username2
+   username3
    ```
 
 3. Run the script:

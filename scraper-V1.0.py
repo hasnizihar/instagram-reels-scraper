@@ -5,7 +5,7 @@ import json
 
 # Instagram Scraper for Reels
 
-inputdata=open("input/input1.txt", "r").read()
+inputdata=open("byusername/input/input1.txt", "r").read()
 for username in inputdata.split():
     print(username)
 
@@ -41,9 +41,9 @@ for username in inputdata.split():
         })
 
     df = pd.DataFrame(reels_data)
-    df.to_excel(f"output/output1/excel/instagram_reels_{username}.xlsx", index=False)
+    df.to_excel(f"byusername/output/output1/excel/instagram_reels_{username}.xlsx", index=False)
 
-    print(f"Saved {len(df)} reels to output/output1/excel/instagram_reels_{username}.xlsx")
+    print(f"Saved {len(df)} reels to byusername/output/output1/excel/instagram_reels_{username}.xlsx")
 
 
 print("All data processed and saved successfully.")
